@@ -7,7 +7,7 @@ import { addVideos } from "./../redux/videosSlice";
 
 const VideoConatiner = () => {
   const dispatch = useDispatch();
-  const videos = useSelector(state=>state.video);
+  const videos = useSelector((state) => state.video);
 
   const getVideos = async () => {
     const data = await fetch(YOUTUBE_VIDEOS_API);
@@ -17,7 +17,7 @@ const VideoConatiner = () => {
   };
 
   useEffect(() => {
-    console.log("VideoContainer -use effect")
+    console.log("VideoContainer -use effect");
     getVideos();
   }, []);
   return (
